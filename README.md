@@ -9,6 +9,7 @@ from cryptography.fernet import Fernet
 key = Fernet.generate_key()
 print(key)
 ```
+バッチで動かすんだったら、`pipenv run python -c "from cryptography.fernet import Fernet; key = Fernet.generate_key(); print(key.decode())"`。
 - そのキーを.envに保存。
     例: ENCRYPTION_KEY=xxxxx`
 
